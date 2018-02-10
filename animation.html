@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+            position: absolute;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .box1 {
+            animation: abc 8s forwards 
+        }
+        .box2 {
+            margin-top: 120px;
+            animation: abc 8s forwards ease
+        }
+        .box3 {
+            margin-top: 240px;
+            animation: abc 8s forwards ease-in
+        }
+        .box4 {
+            margin-top: 360px;
+            animation: abc 8s forwards ease-out
+        }
+        .box5 {
+            margin-top: 480px;
+            animation: abc 8s forwards ease-in-out
+        }
+        .box6 {
+            margin-top: 600px;
+            animation:  abc 8s forwards linear;
+        }
+        @keyframes ro {
+            from{transform: rotate(0deg)}
+            to{transform: rotate(360deg)}
+        }
+        @keyframes abc {
+            from{transform: translateX(0)}
+            to{transform: translateX(600px)}
+        }
+/*
+        @keyframes abc {
+            0% {width:100px;height: 100px;}
+            50% {width: 100px;height: 500px;}
+            100% {width: 500px;height: 500px;}
+        }
+*/
+    </style>
+</head>
+<body>
+    <div class="box1">default</div>
+    <div class="box2">ease</div>
+    <div class="box3">ease-in</div>
+    <div class="box4">ease-out</div>
+    <div class="box5">ease-in-out</div>
+    <div class="box6">linear</div>
+</body>
+</html>

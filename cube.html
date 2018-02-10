@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            perspective: 1000px;
+            left: 50%;
+            top: 150px;
+        }
+        .cube {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateX(45deg)rotateY(60deg)rotateZ(100deg);
+        }
+        .cube div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+/*            opacity: .5;*/
+        }
+        .front {background-color: #ff2626;}
+        .back {background-color: #00ceff;}
+        .top {background-color: #00ff62;}
+        .bottom {background-color: #c0f708;}
+        .left {background-color: #ff9d00;}
+        .right {background-color: #7b0aff;}
+        .front {
+            transform: translateZ(100px);
+        }
+        .back {
+            transform: rotateX(180deg)translateZ(100px);
+        }
+        .top {
+            transform: rotateX(90deg)translateZ(100px)
+        }
+        .bottom {
+            transform: rotateX(-90deg)translateZ(100px)
+        }
+        .left {
+            transform: rotateY(90deg)translateZ(100px)
+        }
+        .right {
+            transform: rotateY(-90deg)translateZ(100px)
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+</body>
+</html>
